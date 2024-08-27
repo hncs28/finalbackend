@@ -54,3 +54,17 @@ Route::post('/CMS/prizes/store', [CMSPrizeController::class,'store']);
 Route::get('/CMS/prizes/{prizeID}', [CMSPrizeController::class,'show']);
 Route::DELETE('/CMS/prizes/destroy/{prizeID}', [CMSPrizeController::class,'destroy']);
 Route::patch('CMS/prizes/update/{prizeID}',[CMSPrizeController::class,'update']);
+
+
+use App\Http\Controllers\View\TraditionalController;
+use App\Http\Controllers\View\ProjectsController;
+use App\Http\Controllers\View\ActivitiesController;
+use App\Http\Controllers\View\AnnualController;
+use App\Http\Controllers\View\PrizeController;
+
+
+Route::get('/humans',[TraditionalController::class,'index']);
+Route::get('/project',[ProjectsController::class,'index']);
+Route::get('/activity',[ActivitiesController::class,'index']);
+Route::get('/annual',[AnnualController::class,'index']);
+Route::get('/prizes',[PrizeController::class,'index']);
