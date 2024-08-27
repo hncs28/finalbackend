@@ -7,7 +7,7 @@
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "/api/index.php"
+            "dest": "public/index.php"
           },
         {
             "src": "/(.*)",
@@ -17,7 +17,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://your.url.from.vercel.app",
+        "APP_URL": "https://sobackend.vercel.app",
         "APP_KEY": "base64:a2fDD02WhvFmowyysmh+EzFFS2ihPQUnwS2yKf4NMfY=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
