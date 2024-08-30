@@ -6,10 +6,8 @@ use App\Http\Controllers\CMS\CMSProjectsController;
 use App\Http\Controllers\CMS\CMSAnnualController;
 use App\Http\Controllers\CMS\CMSActivitiesController;
 use App\Http\Controllers\CMS\CMSPrizeController;
+use App\Http\Controllers\View\AuthController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 #TradiCMS
 Route::get('CMS/traditional_room',[CMSTraditionalController::class,'index']);
 Route::get('CMS/traditional_room/edit/{tradiID}', [CMSTraditionalController::class,'edit']);
@@ -74,3 +72,10 @@ Route::get('/storage2/{filename}', [ImageController::class,'showCustomImage']);
 Route::get('/sym', function () {
     Artisan::call('storage:link');
 });
+
+Route::post('/login',[AuthController::class,'login'])->name('login');
+Route::get('/admin',[AuthController::class,'admin']);
+Route::get('/registerform',function(){
+    return view('CMS/register');
+});
+Route::post('/register',[AuthController::class,'register'])->name('register');
