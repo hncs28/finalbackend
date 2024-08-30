@@ -123,6 +123,7 @@
             <li><a href="/CMS/projects/">Projects</a></li>
             <li><a href="/CMS/traditional_room/">Traditional_room</a></li>
             <li><a href="/CMS/annual/">Annual List</a></li>
+            <li><a href="/CMS/prizes/">Prizes List</a></li>
         </ul>
     </div>
     <h1>Activities list</h1>

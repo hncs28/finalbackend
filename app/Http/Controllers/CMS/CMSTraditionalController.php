@@ -57,6 +57,6 @@ class CMSTraditionalController extends Controller
         $traditional->tradiDetail = $request->tradiDetail;
         $traditional->tradiImg = $request->tradiImg;
         $traditional->save();
-        return redirect()->action([CMStraditionalController::class,'index']);
+        return redirect()->action([CMSTraditionalController::class,'index']);
     }
 }
