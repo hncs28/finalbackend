@@ -71,3 +71,6 @@ Route::get('/annual',[AnnualController::class,'index']);
 Route::get('/prizes',[PrizeController::class,'index']);
 
 Route::get('/storage2/{filename}', [ImageController::class,'showCustomImage']);
+Route::get('/sym', function () {
+    Artisan::call('storage:link');
+});
