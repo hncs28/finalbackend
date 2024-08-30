@@ -61,6 +61,7 @@ use App\Http\Controllers\View\ProjectsController;
 use App\Http\Controllers\View\ActivitiesController;
 use App\Http\Controllers\View\AnnualController;
 use App\Http\Controllers\View\PrizeController;
+use App\Http\Controllers\View\ImageController;
 
 
 Route::get('/humans',[TraditionalController::class,'index']);
@@ -68,3 +69,5 @@ Route::get('/project',[ProjectsController::class,'index']);
 Route::get('/activity',[ActivitiesController::class,'index']);
 Route::get('/annual',[AnnualController::class,'index']);
 Route::get('/prizes',[PrizeController::class,'index']);
+
+Route::get('/storage2/{filename}', [ImageController::class,'showCustomImage']);
