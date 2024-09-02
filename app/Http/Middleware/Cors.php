@@ -21,7 +21,7 @@ class Cors
         $SymfonyResopnse = 'Symfony\Component\HttpFoundation\Response';
 
         $headers = [
-            'Access-Control-Allow-Origin' => 'https://somedia-five.vercel.app',
+            'Access-Control-Allow-Origin' => 'https://somedia-five.vercel.app, https://somediaclub.com',
             'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, PATCH, DELETE',
             'Access-Control-Allow-Headers' => 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Authorization , Access-Control-Request-Headers',
             'Access-Control-Allow-Credentials' => 'true',
@@ -31,7 +31,7 @@ class Cors
         if ($response instanceof $IlluminateResponse) {
             $response->header('Access-Control-Allow-Methods', 'HEAD, GET, POST, PUT, PATCH, DELETE');
             $response->header('Access-Control-Allow-Headers', $request->header('Access-Control-Request-Headers'));
-            $response->header('Access-Control-Allow-Origin', 'https://somedia-five.vercel.app');
+            $response->header('Access-Control-Allow-Origin', 'https://somedia-five.vercel.app, https://somediaclub.com');
             $response->header('Access-Control-Allow-Credentials', 'true');
 
             return $response;
