@@ -1,3 +1,4 @@
+@if (Auth::check())
 <head>
     <style>
         body {
@@ -124,6 +125,11 @@
             <li><a href="/CMS/traditional_room/">Traditional_room</a></li>
             <li><a href="/CMS/annual/">Annual List</a></li>
             <li><a href="/CMS/prizes/">Prizes List</a></li>
+            <li>   <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </form>
+            </li>
         </ul>
     </div>
     <h1>Prizes list</h1>
@@ -164,4 +170,12 @@
         </a>
     </p>
   </body>
+  @else
+    <p>You must be logged in to view this page.</p>
+    <p>
+        <a href="\admin">
+            <button type="button">Back to login page</button>
+        </a>
+    </p>
+@endif
   

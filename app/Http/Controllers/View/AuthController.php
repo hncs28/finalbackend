@@ -43,4 +43,10 @@ class AuthController extends Controller
         \Log::info('store success', ['data' => $user]);
     }
     
+    public function logout(Request $request) {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return view('/CMS/login');
+    }
 }
