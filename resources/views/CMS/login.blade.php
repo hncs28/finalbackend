@@ -132,9 +132,6 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-
-            <button type="submit">Login</button>
-            <a href="#" class="forgot-password">Forgot Password?</a>
         </form>
     </div>
 </body>

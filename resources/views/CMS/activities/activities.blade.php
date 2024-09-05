@@ -150,18 +150,20 @@
         }
 
         .btn-add {
-            display: inline-block;
-            background-color: #2a9d8f;
-            color: white;
-            padding: 15px 25px;
-            font-size: 18px;
-            text-align: center;
-            margin: 30px auto;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+        display: inline-block;
+        background-color: #2a9d8f;
+        color: white;
+        padding: 15px 25px;
+        font-size: 18px;
+        text-align: center;
+        margin: 30px auto;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        align: center;
+        text-decoration: none; /* Remove underline from link */
+    }
 
         .btn-add:hover {
             background-color: #21867a;
