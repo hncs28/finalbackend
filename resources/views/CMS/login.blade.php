@@ -132,6 +132,8 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
+
+            <button type="submit">Login</button>
         </form>
     </div>
 </body>
