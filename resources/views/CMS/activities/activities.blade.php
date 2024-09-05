@@ -4,9 +4,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-
+    <title> Activites CMS Page </title>
     <style>
-        /* Reset some default styles */
         * {
             margin: 0;
             padding: 0;
@@ -20,7 +19,6 @@
             color: #333;
         }
 
-        /* Navigation Bar */
         nav {
             background-color: #1d3557;
             padding: 15px 30px;
@@ -64,7 +62,6 @@
             background-color: #d62828;
         }
 
-        /* Header Styling */
         .page-header {
             text-align: center;
             margin: 60px 0;
@@ -73,7 +70,6 @@
             color: #1d3557;
         }
 
-        /* Activities Table */
         table {
             width: 90%;
             margin: 0 auto 40px auto;
@@ -198,7 +194,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
     <nav>
         <ul>
             <li><a href="/CMS/activities/">Activities</a></li>
@@ -213,10 +208,8 @@
         </form>
     </nav>
 
-    <!-- Page Header -->
     <div class="page-header">Activities List</div>
 
-    <!-- Activities Table -->
     <table>
         <thead>
             <tr>
@@ -247,7 +240,6 @@
         </tbody>
     </table>
 
-    <!-- Add New Activity Button -->
     <a href="/CMS/activities/create" class="btn-add">+ Add New Activity</a>
 </body>
 @else
