@@ -127,15 +127,22 @@
     }
 
     .button-back {
-        text-align: center;
-        font-size: 14px;
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid var(--main-color);
+        background-color: var(--bg-color);
+        box-shadow: 4px 4px var(--main-color);
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--font-color);
+        cursor: pointer;
         margin-top: 20px;
-        text-decoration: none;
-        color: var(--font-color-sub);
     }
 
     .button-back:hover {
-        text-decoration: underline;
+        background-color: var(--input-focus);
+        color: white;
     }
 
     .container {
