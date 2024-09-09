@@ -138,6 +138,9 @@
         color: var(--font-color);
         cursor: pointer;
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .button-back:hover {
