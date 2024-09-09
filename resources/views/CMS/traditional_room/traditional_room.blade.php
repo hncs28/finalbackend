@@ -195,7 +195,7 @@
         </style>
     </head>
 
-    <>
+    <body>
         <!-- Navigation Bar -->
         <nav>
             <ul>
@@ -253,7 +253,7 @@
             <!-- Add New Traditional Room Button -->
             <a href="/CMS/traditional_room/create" class="btn-add">Add New Traditional Room</a>
         </div>
-        </body>
+    </body>
 @else
     <style>
         .message-container {
