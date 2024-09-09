@@ -16,7 +16,6 @@
         border-radius: 5px;
         border: 2px solid var(--main-color);
         box-shadow: 4px 4px var(--main-color);
-        max-width: 600px;
         margin: 50px auto;
     }
 
