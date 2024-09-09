@@ -1,20 +1,27 @@
 <style>
     .form {
-        --input-focus: #2d8cf0;
-        --font-color: #323232;
-        --font-color-sub: #666;
-        --bg-color: #fff;
-        --main-color: #323232;
+        --input-focus: #4CAF50;
+        /* Xanh lá nhạt cho viền khi focus */
+        --font-color: #333;
+        /* Màu xám đậm cho văn bản */
+        --font-color-sub: #777;
+        /* Màu xám nhẹ cho phụ đề */
+        --bg-color: #f9f9f9;
+        /* Màu nền rất nhạt */
+        --main-color: #4CAF50;
+        /* Xanh lá nhạt cho viền và box shadow */
         padding: 20px;
-        background: lightgrey;
+        background: #fff;
+        /* Nền trắng cho form */
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 20px;
-        border-radius: 5px;
-        border: 2px solid var(--main-color);
-        box-shadow: 4px 4px var(--main-color);
+        border-radius: 10px;
+        border: 1px solid var(--main-color);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* Màu đổ bóng mềm mại */
         width: 80%;
         max-width: 600px;
     }
