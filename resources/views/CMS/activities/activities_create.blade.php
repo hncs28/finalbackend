@@ -150,8 +150,7 @@
         <input type="text" name="actName" placeholder="Enter activity name" class="input">
         <p>Activity image</p>
         <input type="text" name="actImg" class="input" placeholder="Enter activity image url">
-
         <button type="submit" class="button-submit">Submit</button>
-        <button class="button-submit" href="/CMS/activities/">Go to Homepage</button>
+        <button class="button-back" href="/CMS/activities/">Go to Homepage</button>
     </form>
 </div>
