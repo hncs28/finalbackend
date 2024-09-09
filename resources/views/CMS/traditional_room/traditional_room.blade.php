@@ -164,6 +164,7 @@
                 font-weight: 600;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
+                text-decoration: none;
             }
 
             .btn-add:hover {
@@ -218,11 +219,11 @@
             <table>
                 <thead>
                     <tr>
-                        <th>tradiID</th>
-                        <th>tradiName</th>
-                        <th>tradiGen</th>
-                        <th>tradiDetail</th>
-                        <th>tradiImg</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Gen</th>
+                        <th>Detail</th>
+                        <th>Img</th>
                         <th>Tools</th>
                     </tr>
                 </thead>

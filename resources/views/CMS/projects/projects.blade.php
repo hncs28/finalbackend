@@ -165,6 +165,7 @@
                 font-weight: 600;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
+                text-decoration: none;
             }
 
             .btn-add:hover {
