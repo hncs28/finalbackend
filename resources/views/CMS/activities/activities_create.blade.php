@@ -10,7 +10,7 @@
         background: lightgrey;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         gap: 20px;
         border-radius: 5px;
@@ -133,16 +133,26 @@
     .button-back:hover {
         text-decoration: underline;
     }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 </style>
+<div class="container">
+    <form class="form" method="POST" action="/CMS/activities/store">
+        @csrf
+        <div class="title">
+            Form Add New in Activities<br><span>Fill out the details</span>
+        </div>
+        <p>Activity name</p>
+        <input type="text" name="actName" placeholder="Enter activity name" class="input">
+        <p>Activity image</p>
+        <input type="text" name="actImg" class="input" placeholder="Enter activity image url">
 
-<form class="form" method="POST" action="/CMS/activities/store">
-    @csrf
-    <div class="title">
-        Form Add New in Activities<br><span>Fill out the details</span>
-    </div>
-    <input type="text" name="actName" placeholder="Enter activity name" class="input">
-    <input type="file" name="actImg" class="input">
-
-    <button type="submit" class="button-submit">Submit</button>
-    <a href="/CMS/activities/" class="button-back">Go to Homepage</a>
-</form>
+        <button type="submit" class="button-submit">Submit</button>
+        <button class="button-submit" href="/CMS/activities/">Go to Homepage</button>
+    </form>
+</div>
