@@ -38,9 +38,11 @@
             font-weight: bold;
             font-size: x-large;
             margin-top: 1.5em;
+            margin-bottom: 1em;
         }
 
         .inputBox {
+            margin-top: 20px;
             position: relative;
             width: 250px;
         }
@@ -102,6 +104,7 @@
             text-transform: uppercase;
             font-size: 10px;
             letter-spacing: 2px;
+            margin-top: 20px;
         }
 
         .login-button:hover {
@@ -142,7 +145,7 @@
 
             <button type="submit" class="login-button">Enter</button>
         </form>
-        <a href="#" class="forgot-password">Forgot Password?</a>
+        
     </div>
 </body>
 
