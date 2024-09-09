@@ -142,8 +142,8 @@
         <div class="title">
             <p>Update Activity Information</p>
         </div>
-        <input type="text" name="actName" value="{{ $act->actName }}" class="input">
-        <input type="text" name="actImg" value="{{ $act->actImg }}" class="input">
+        <input type="text" name="actName" value="{{ $act->actName }}" class="input" required>
+        <input type="text" name="actImg" value="{{ $act->actImg }}" class="input" required>
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/activities/">Go to Homepage</a>
     </form>

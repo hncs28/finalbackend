@@ -150,11 +150,11 @@
         </div>
 
         <input type="text" name="prizeName" value="{{ $prize->prizeName }}" class="input"
-            placeholder="Enter prize name">
+            placeholder="Enter prize name" required>
         <input type="text" name="prizeTime" value="{{ $prize->prizeTime }}" class="input"
-            placeholder="Enter prize time">
+            placeholder="Enter prize time" required>
         <input type="text" name="prizeLocation" value="{{ $prize->prizeLocation }}" class="input"
-            placeholder="Enter prize location">
+            placeholder="Enter prize location" required>
 
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/prizes/">Back to Homepage</a>

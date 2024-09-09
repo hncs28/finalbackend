@@ -147,9 +147,9 @@
         <div class="title">
             <p>Form add new prize</p>
         </div>
-        <input type="text" name="prizeName" class="input" placeholder="Enter prize name">
-        <input type="text" name="prizeTime" class="input" placeholder="Enter prize time">
-        <input type="text" name="prizeLocation" class="input" placeholder="Enter prize location">
+        <input type="text" name="prizeName" class="input" placeholder="Enter prize name" required>
+        <input type="text" name="prizeTime" class="input" placeholder="Enter prize time" required>
+        <input type="text" name="prizeLocation" class="input" placeholder="Enter prize location" required>
 
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/prizes/">Back to Homepage</a>

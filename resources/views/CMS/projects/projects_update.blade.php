@@ -150,11 +150,11 @@
         </div>
 
         <input type="text" name="projectName" class="input" value="{{ $project->projectName }}"
-            placeholder="Enter project name">
+            placeholder="Enter project name" required>
         <input type="text" name="projectLink" class="input" value="{{ $project->projectLink }}"
-            placeholder="Enter project link">
+            placeholder="Enter project link" required>
         <input type="text" name="projectImg" class="input" value="{{ $project->projectImg }}"
-            placeholder="Enter project image URL">
+            placeholder="Enter project image URL" required>
 
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/projects/">Back to Homepage</a>

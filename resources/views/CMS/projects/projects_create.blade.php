@@ -147,9 +147,9 @@
         <div class="title">
             <p>Form Add New Project</p>
         </div>
-        <input type="text" name="projectName" class="input" placeholder="Enter project name">
-        <input type="text" name="projectLink" class="input" placeholder="Enter project link">
-        <input type="text" name="projectImg" class="input" placeholder="Enter project image URL">
+        <input type="text" name="projectName" class="input" placeholder="Enter project name" required>
+        <input type="text" name="projectLink" class="input" placeholder="Enter project link" required>
+        <input type="text" name="projectImg" class="input" placeholder="Enter project image URL" required>
 
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/projects/">Back to Homepage</a>

@@ -150,14 +150,14 @@
             <p>Update Traditional Room Information</p>
         </div>
 
-        <input type="text" name="tradiName" class="input" value="{{ $traditional->tradiName }}"
-            placeholder="Enter traditional room name">
+        <input type="text" name="tradiName" class="input" value="{{ $traditional->tradiName }}" placeholder="Enter name"
+            required>
         <input type="text" name="tradiGen" class="input" value="{{ $traditional->tradiGen }}"
-            placeholder="Enter generation">
+            placeholder="Enter generation" required>
         <input type="text" name="tradiDetail" class="input" value="{{ $traditional->tradiDetail }}"
             placeholder="Enter detail">
         <input type="text" name="tradiImg" class="input" value="{{ $traditional->tradiImg }}"
-            placeholder="Enter image URL">
+            placeholder="Enter image URL" required>
 
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/traditional_room/">Back to Homepage</a>

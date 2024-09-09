@@ -132,9 +132,9 @@
         <div class="title">
             <p>Form Add New in Annual</p>
         </div>
-        <input type="text" name="annualName" placeholder="Enter annual name" class="input">
-        <input type="text" name="annualTime" placeholder="Enter annual time" class="input">
-        <input type="text" name="annualImg" placeholder="Enter image URL" class="input">
+        <input type="text" name="annualName" placeholder="Enter annual name" class="input" required>
+        <input type="text" name="annualTime" placeholder="Enter annual time" class="input" required>
+        <input type="text" name="annualImg" placeholder="Enter image URL" class="input" required>
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/annual/">Back to Homepage</a>
     </form>

@@ -138,11 +138,11 @@
             <p>Update Annual Information</p>
         </div>
         <input type="text" name="annualName" value="{{ $annual->annualName }}" class="input"
-            placeholder="Enter annual name">
+            placeholder="Enter annual name" required>
         <input type="text" name="annualTime" value="{{ $annual->annualTime }}" class="input"
-            placeholder="Enter annual time">
+            placeholder="Enter annual time" required>
         <input type="text" name="annualImg" value="{{ $annual->annualImg }}" class="input"
-            placeholder="Enter image URL">
+            placeholder="Enter image URL" required>
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/annual/">Back to Homepage</a>
     </form>
