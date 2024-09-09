@@ -1,112 +1,148 @@
 <style>
-    form {
+    /* Styling from the second form */
+    .form {
+        --input-focus: #2d8cf0;
+        --font-color: #323232;
+        --font-color-sub: #666;
+        --bg-color: #fff;
+        --main-color: #323232;
+        padding: 20px;
+        background: lightgrey;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        border-radius: 5px;
+        border: 2px solid var(--main-color);
+        box-shadow: 4px 4px var(--main-color);
         max-width: 600px;
         margin: 50px auto;
-        padding: 30px;
-        background: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        font-family: 'Nunito', sans-serif;
     }
 
-    form h1 {
-        text-align: center;
-        font-size: 24px;
-        margin-bottom: 30px;
-        color: #1d3557;
+    .title {
+        color: var(--font-color);
+        font-weight: 900;
+        font-size: 20px;
+        margin-bottom: 25px;
     }
 
-    form p {
-        margin-bottom: 20px;
-    }
-
-    form label {
-        font-weight: bold;
-        display: block;
-        margin-bottom: 8px;
-        font-size: 16px;
-        color: #333;
-    }
-
-    form input[type="text"],
-    form textarea {
-        width: calc(100% - 20px);
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        box-sizing: border-box;
-        font-size: 16px;
-        transition: border 0.3s ease;
-    }
-
-    form input[type="text"]:focus,
-    form textarea:focus {
-        border-color: #457b9d;
-    }
-
-    form button[type="submit"],
-    form button[type="button"] {
-        display: inline-block;
-        background-color: #2a9d8f;
-        color: white;
-        border: none;
-        padding: 12px 25px;
-        font-size: 16px;
-        border-radius: 5px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        transition: background 0.3s ease;
-        margin-right: 10px;
-    }
-
-    form button[type="submit"]:hover {
-        background-color: #21867a;
-    }
-
-    form button[type="button"] a {
-        color: white;
-        text-decoration: none;
+    .title span {
+        color: var(--font-color-sub);
         font-weight: 600;
+        font-size: 17px;
     }
 
-    form button[type="button"] {
-        background-color: #e63946;
+    .input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid var(--main-color);
+        background-color: var(--bg-color);
+        box-shadow: 4px 4px var(--main-color);
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--font-color);
+        padding: 5px 10px;
+        outline: none;
     }
 
-    form button[type="button"]:hover {
-        background-color: #d62828;
+    .input::placeholder {
+        color: var(--font-color-sub);
+        opacity: 0.8;
     }
 
-    /* Responsive styling */
-    @media (max-width: 768px) {
-        form {
-            padding: 20px;
-        }
+    .input:focus {
+        border: 2px solid var(--input-focus);
+    }
 
-        form button[type="submit"],
-        form button[type="button"] {
-            width: 100%;
-            margin: 10px 0;
-        }
+    .login-with {
+        display: flex;
+        gap: 20px;
+    }
+
+    .button-log {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: 2px solid var(--main-color);
+        background-color: var(--bg-color);
+        box-shadow: 4px 4px var(--main-color);
+        color: var(--font-color);
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--main-color);
+    }
+
+    .button-log:active,
+    .button-confirm:active {
+        box-shadow: 0px 0px var(--main-color);
+        transform: translate(3px, 3px);
+    }
+
+    .button-confirm {
+        margin: 50px auto 0 auto;
+        width: 120px;
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid var(--main-color);
+        background-color: var(--bg-color);
+        box-shadow: 4px 4px var(--main-color);
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--font-color);
+        cursor: pointer;
+    }
+
+    /* Additional styles for submit and navigation buttons */
+    .button-submit {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid var(--main-color);
+        background-color: var(--bg-color);
+        box-shadow: 4px 4px var(--main-color);
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--font-color);
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .button-submit:hover {
+        background-color: var(--input-focus);
+        color: white;
+    }
+
+    .button-back {
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px;
+        text-decoration: none;
+        color: var(--font-color-sub);
+    }
+
+    .button-back:hover {
+        text-decoration: underline;
     }
 </style>
 
-<form method="POST" action="/CMS/activities/store">
+<form class="form" method="POST" action="/CMS/activities/store">
     @csrf
-    <h1>Form Add New in Activities</h1>
-    <p>
-        <label for="actName">Name</label>
-        <input type="text" name="actName" placeholder="Enter activity name">
-    </p>
-    <p>
-        <label for="actImg">Image URL</label>
-        <input type="text" name="actImg" placeholder="Enter image URL">
-    </p>
+    <div class="title">
+        Form Add New in Activities<br><span>Fill out the details</span>
+    </div>
+    <input type="text" name="actName" placeholder="Enter activity name" class="input">
+    <input type="file" name="actImg" class="input">
 
-    <p>
-        <button type="submit">Submit</button>
-        <button type="button"><a href="/CMS/activities/">Go to Homepage</a></button>
-    </p>
+    <button type="submit" class="button-submit">Submit</button>
+    <a href="/CMS/activities/" class="button-back">Go to Homepage</a>
 </form>
