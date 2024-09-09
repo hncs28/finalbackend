@@ -62,18 +62,18 @@
 
         .password-container {
             position: relative;
+            display: flex;
+            align-items: center;
         }
 
         .password-container input {
-            width: 100%;
+            flex: 1;
             padding-right: 40px;
         }
 
         .password-container .toggle-password {
             position: absolute;
-            top: 50%;
             right: 10px;
-            transform: translateY(-50%);
             cursor: pointer;
             font-size: 1.2em;
             color: #666;
@@ -117,7 +117,7 @@
             <!-- Password field with show/hide icon -->
             <div class="password-container">
                 <input class="input" id="password" name="password" placeholder="Password" type="password" required>
-                <i class="toggle-password" onclick="togglePassword()">👁️</i>
+                <span class="toggle-password" onclick="togglePassword()">👁️</span>
             </div>
 
             <!-- Submit button -->
