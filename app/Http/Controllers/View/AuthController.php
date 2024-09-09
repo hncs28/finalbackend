@@ -54,9 +54,14 @@ class AuthController extends Controller
 
     public function logout(Request $request)
     {
-        Auth::logout();
+        Auth::logout(); // Đăng xuất người dùng
+
+        // Hủy bỏ phiên và tạo lại mã token CSRF
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return view('/CMS/admin');
+
+        // Điều hướng về trang đăng nhập (hoặc trang chính)
+        return redirect('/CMS/admin'); // Sử dụng redirect thay vì view
     }
+
 }
