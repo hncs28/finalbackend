@@ -8,7 +8,7 @@
         <title>Prize CMS Page</title>
 
         <style>
-            /* Reset some default styles */
+           
             * {
                 margin: 0;
                 padding: 0;
