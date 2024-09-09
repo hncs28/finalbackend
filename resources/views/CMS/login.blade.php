@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+        /* From Uiverse.io by JkHuger */
+        .singup {
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            font-weight: bold;
+            font-size: x-large;
+            margin-top: 1.5em;
         }
 
-        .container {
+        .card {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,28 +27,19 @@
             gap: 35px;
             border-radius: 15px;
             background: #e3e3e3;
-            box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
-            padding: 40px;
+            box-shadow: 16px 16px 32px #c8c8c8,
+                -16px -16px 32px #fefefe;
+            border-radius: 8px;
         }
 
-        .login-title {
-            color: #000;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            display: block;
-            font-weight: bold;
-            font-size: x-large;
-            margin-top: 1.5em;
-            margin-bottom: 1em;
-        }
-
-        .inputBox {
-            margin-top: 20px;
+        .inputBox,
+        .inputBox1 {
             position: relative;
             width: 250px;
         }
 
-        .inputBox input {
+        .inputBox input,
+        .inputBox1 input {
             width: 100%;
             padding: 10px;
             outline: none;
@@ -61,7 +53,9 @@
             border-bottom-left-radius: 8px;
         }
 
-        .inputBox span {
+        .inputBox span,
+        .inputBox1 span {
+            margin-top: 5px;
             position: absolute;
             left: 0;
             transform: translateY(-4px);
@@ -87,13 +81,26 @@
             border: 2px;
         }
 
+        .inputBox1 input:valid~span,
+        .inputBox1 input:focus~span {
+            transform: translateX(156px) translateY(-15px);
+            font-size: 0.8em;
+            padding: 5px 10px;
+            background: #000;
+            letter-spacing: 0.2em;
+            color: #fff;
+            border: 2px;
+        }
+
         .inputBox input:valid,
-        .inputBox input:focus {
+        .inputBox input:focus,
+        .inputBox1 input:valid,
+        .inputBox1 input:focus {
             border: 2px solid #000;
             border-radius: 8px;
         }
 
-        .login-button {
+        .enter {
             height: 45px;
             width: 100px;
             border-radius: 5px;
@@ -104,48 +111,42 @@
             text-transform: uppercase;
             font-size: 10px;
             letter-spacing: 2px;
-            margin-top: 20px;
+            margin-bottom: 3em;
         }
 
-        .login-button:hover {
+        .enter:hover {
             background-color: rgb(0, 0, 0);
             color: white;
-        }
-
-        .forgot-password {
-            margin-top: 12px;
-            font-size: 14px;
-            color: #6e8efb;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .forgot-password:hover {
-            color: #5a6bfc;
-            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h2 class="login-title">Admin Login</h2>
+        <div class="card">
+            <a class="singup">Admin login</a>
 
-        <form action="{{ route('login') }}" method="POST">
-            @csrf
-            <div class="inputBox">
-                <input type="email" id="email" name="email" required>
-                <span>Email</span>
-            </div>
+            <!-- Form starts here -->
+            <form action="{{ route('login') }}" method="POST">
+                @csrf
+                <!-- Email input -->
+                <div class="inputBox1">
+                    <input type="email" name="email" required="required">
+                    <span class="user">Email</span>
+                </div>
 
-            <div class="inputBox">
-                <input type="password" id="password" name="password" required>
-                <span>Password</span>
-            </div>
+                <!-- Password input -->
+                <div class="inputBox">
+                    <input type="password" name="password" required="required">
+                    <span>Password</span>
+                </div>
 
-            <button type="submit" class="login-button">Enter</button>
-        </form>
-        
+                <!-- Submit button -->
+                <button type="submit" class="enter">Enter</button>
+            </form>
+            <!-- Form ends here -->
+
+        </div>
     </div>
 </body>
 
