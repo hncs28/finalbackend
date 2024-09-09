@@ -53,16 +53,12 @@
     }
 
     .button-back {
-        background-color: rgb(3, 235, 99);
+        background-color: #007bff;
         color: white;
-        margin-top: 10px;
-        text-decoration: none;
-        display: inline-block;
-        text-align: center;
     }
 
     .button-back:hover {
-        background-color: #32a852;
+        background-color: #0056b3;
     }
 
     .button-back a {
