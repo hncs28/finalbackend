@@ -20,6 +20,7 @@
                 font-size: 16px;
                 background-color: #f8f9fa;
                 color: #333;
+                width: 100%;
             }
 
             /* Navigation Bar */
