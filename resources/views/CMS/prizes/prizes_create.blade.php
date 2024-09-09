@@ -141,16 +141,17 @@
         }
     }
 </style>
+<div class="container">
+    <form class="form" method="POST" action="/CMS/prizes/store">
+        @csrf
+        <div class="title">
+            <p>Form add new prize</p>
+        </div>
+        <input type="text" name="prizeName" class="input" placeholder="Enter prize name">
+        <input type="text" name="prizeTime" class="input" placeholder="Enter prize time">
+        <input type="text" name="prizeLocation" class="input" placeholder="Enter prize location">
 
-<form class="form" method="POST" action="/CMS/prizes/store">
-    @csrf
-    <div class="title">
-        <p>Form add new prize</p>
-    </div>
-    <input type="text" name="prizeName" class="input" placeholder="Enter prize name">
-    <input type="text" name="prizeTime" class="input" placeholder="Enter prize time">
-    <input type="text" name="prizeLocation" class="input" placeholder="Enter prize location">
-
-    <button type="submit" class="button-submit">Submit</button>
-    <a class="button-back" href="/CMS/prizes/">Back to Homepage</a>
-</form>
+        <button type="submit" class="button-submit">Submit</button>
+        <a class="button-back" href="/CMS/prizes/">Back to Homepage</a>
+    </form>
+</div>

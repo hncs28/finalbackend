@@ -141,16 +141,17 @@
         }
     }
 </style>
+<div class="container">
+    <form class="form" method="POST" action="/CMS/projects/store">
+        @csrf
+        <div class="title">
+            <p>Form Add New Project</p>
+        </div>
+        <input type="text" name="projectName" class="input" placeholder="Enter project name">
+        <input type="text" name="projectLink" class="input" placeholder="Enter project link">
+        <input type="text" name="projectImg" class="input" placeholder="Enter project image URL">
 
-<form class="form" method="POST" action="/CMS/projects/store">
-    @csrf
-    <div class="title">
-        <p>Form Add New Project</p>
-    </div>
-    <input type="text" name="projectName" class="input" placeholder="Enter project name">
-    <input type="text" name="projectLink" class="input" placeholder="Enter project link">
-    <input type="text" name="projectImg" class="input" placeholder="Enter project image URL">
-
-    <button type="submit" class="button-submit">Submit</button>
-    <a class="button-back" href="/CMS/projects/">Back to Homepage</a>
-</form>
+        <button type="submit" class="button-submit">Submit</button>
+        <a class="button-back" href="/CMS/projects/">Back to Homepage</a>
+    </form>
+</div>

@@ -141,18 +141,22 @@
         }
     }
 </style>
-<form class="form" method="POST" action="/CMS/prizes/update/{{ $prize->prizeID }}">
-    @method('PATCH')
-    @csrf
-    <div class="title">
-        <p>Update Prize Information</p>
-    </div>
+<div class="cotainer">
+    <form class="form" method="POST" action="/CMS/prizes/update/{{ $prize->prizeID }}">
+        @method('PATCH')
+        @csrf
+        <div class="title">
+            <p>Update Prize Information</p>
+        </div>
 
-    <input type="text" name="prizeName" value="{{ $prize->prizeName }}" class="input" placeholder="Enter prize name">
-    <input type="text" name="prizeTime" value="{{ $prize->prizeTime }}" class="input" placeholder="Enter prize time">
-    <input type="text" name="prizeLocation" value="{{ $prize->prizeLocation }}" class="input"
-        placeholder="Enter prize location">
+        <input type="text" name="prizeName" value="{{ $prize->prizeName }}" class="input"
+            placeholder="Enter prize name">
+        <input type="text" name="prizeTime" value="{{ $prize->prizeTime }}" class="input"
+            placeholder="Enter prize time">
+        <input type="text" name="prizeLocation" value="{{ $prize->prizeLocation }}" class="input"
+            placeholder="Enter prize location">
 
-    <button type="submit" class="button-submit">Submit</button>
-    <a class="button-back" href="/CMS/prizes/">Back to Homepage</a>
-</form>
+        <button type="submit" class="button-submit">Submit</button>
+        <a class="button-back" href="/CMS/prizes/">Back to Homepage</a>
+    </form>
+</div>

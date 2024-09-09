@@ -141,23 +141,25 @@
         }
     }
 </style>
+<div class="container">
+    <form class="form" method="POST" action="/CMS/traditional_room/update/{{ $traditional->tradiID }}">
+        @method('PATCH')
+        @csrf
 
-<form class="form" method="POST" action="/CMS/traditional_room/update/{{ $traditional->tradiID }}">
-    @method('PATCH')
-    @csrf
+        <div class="title">
+            <p>Update Traditional Room Information</p>
+        </div>
 
-    <div class="title">
-        <p>Update Traditional Room Information</p>
-    </div>
+        <input type="text" name="tradiName" class="input" value="{{ $traditional->tradiName }}"
+            placeholder="Enter traditional room name">
+        <input type="text" name="tradiGen" class="input" value="{{ $traditional->tradiGen }}"
+            placeholder="Enter generation">
+        <input type="text" name="tradiDetail" class="input" value="{{ $traditional->tradiDetail }}"
+            placeholder="Enter detail">
+        <input type="text" name="tradiImg" class="input" value="{{ $traditional->tradiImg }}"
+            placeholder="Enter image URL">
 
-    <input type="text" name="tradiName" class="input" value="{{ $traditional->tradiName }}"
-        placeholder="Enter traditional room name">
-    <input type="text" name="tradiGen" class="input" value="{{ $traditional->tradiGen }}"
-        placeholder="Enter generation">
-    <input type="text" name="tradiDetail" class="input" value="{{ $traditional->tradiDetail }}"
-        placeholder="Enter detail">
-    <input type="text" name="tradiImg" class="input" value="{{ $traditional->tradiImg }}" placeholder="Enter image URL">
-
-    <button type="submit" class="button-submit">Submit</button>
-    <a class="button-back" href="/CMS/traditional_room/">Back to Homepage</a>
-</form>
+        <button type="submit" class="button-submit">Submit</button>
+        <a class="button-back" href="/CMS/traditional_room/">Back to Homepage</a>
+    </form>
+</div>

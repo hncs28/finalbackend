@@ -141,18 +141,19 @@
         }
     }
 </style>
+<div class="container">
+    <form class="form" method="POST" action="/CMS/traditional_room/store">
+        @csrf
+        <div class="title">
+            <h2>Add new human</h2>
+        </div>
 
-<form class="form" method="POST" action="/CMS/traditional_room/store">
-    @csrf
-    <div class="title">
-        <h2>Add new human</h2>
-    </div>
+        <input type="text" name="tradiName" class="input" placeholder="Enter traditional room name">
+        <input type="text" name="tradiGen" class="input" placeholder="Enter generation">
+        <input type="text" name="tradiDetail" class="input" placeholder="Enter detail">
+        <input type="text" name="tradiImg" class="input" placeholder="Enter image URL">
 
-    <input type="text" name="tradiName" class="input" placeholder="Enter traditional room name">
-    <input type="text" name="tradiGen" class="input" placeholder="Enter generation">
-    <input type="text" name="tradiDetail" class="input" placeholder="Enter detail">
-    <input type="text" name="tradiImg" class="input" placeholder="Enter image URL">
-
-    <button type="submit" class="button-submit">Submit</button>
-    <a class="button-back" href="/CMS/traditional_room/">Back to Homepage</a>
-</form>
+        <button type="submit" class="button-submit">Submit</button>
+        <a class="button-back" href="/CMS/traditional_room/">Back to Homepage</a>
+    </form>
+</div>

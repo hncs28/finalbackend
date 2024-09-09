@@ -141,21 +141,22 @@
         }
     }
 </style>
+<div class="container">
+    <form class="form" method="POST" action="/CMS/projects/update/{{ $project->projectID }}">
+        @method('PATCH')
+        @csrf
+        <div class="title">
+            <p>Update Project Information</p>
+        </div>
 
-<form class="form" method="POST" action="/CMS/projects/update/{{ $project->projectID }}">
-    @method('PATCH')
-    @csrf
-    <div class="title">
-        <p>Update Project Information</p>
-    </div>
+        <input type="text" name="projectName" class="input" value="{{ $project->projectName }}"
+            placeholder="Enter project name">
+        <input type="text" name="projectLink" class="input" value="{{ $project->projectLink }}"
+            placeholder="Enter project link">
+        <input type="text" name="projectImg" class="input" value="{{ $project->projectImg }}"
+            placeholder="Enter project image URL">
 
-    <input type="text" name="projectName" class="input" value="{{ $project->projectName }}"
-        placeholder="Enter project name">
-    <input type="text" name="projectLink" class="input" value="{{ $project->projectLink }}"
-        placeholder="Enter project link">
-    <input type="text" name="projectImg" class="input" value="{{ $project->projectImg }}"
-        placeholder="Enter project image URL">
-
-    <button type="submit" class="button-submit">Submit</button>
-    <a class="button-back" href="/CMS/projects/">Back to Homepage</a>
-</form>
+        <button type="submit" class="button-submit">Submit</button>
+        <a class="button-back" href="/CMS/projects/">Back to Homepage</a>
+    </form>
+</div>
