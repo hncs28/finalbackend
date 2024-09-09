@@ -60,6 +60,25 @@
             box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
         }
 
+        .password-container {
+            position: relative;
+        }
+
+        .password-container input {
+            width: 100%;
+            padding-right: 40px;
+        }
+
+        .password-container .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #666;
+        }
+
         .form .btn {
             margin-top: 2em;
             align-self: center;
@@ -91,15 +110,34 @@
     <div class="container">
         <form class="form" action="{{ route('login') }}" method="POST">
             @csrf <!-- CSRF token for Laravel -->
-            <p class="heading">Login</p>
+            <p class="heading">Admin Login</p>
             <!-- Email field with name attribute -->
             <input class="input" name="email" placeholder="Email" type="email" required>
-            <!-- Password field with name attribute -->
-            <input class="input" name="password" placeholder="Password" type="password" required>
+
+            <!-- Password field with show/hide icon -->
+            <div class="password-container">
+                <input class="input" id="password" name="password" placeholder="Password" type="password" required>
+                <i class="toggle-password" onclick="togglePassword()">👁️</i>
+            </div>
+
             <!-- Submit button -->
             <button class="btn" type="submit">Submit</button>
         </form>
     </div>
+
+    <script>
+        function togglePassword() {
+            const passwordField = document.getElementById('password');
+            const icon = document.querySelector('.toggle-password');
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                icon.textContent = '🙈'; // Change icon to "hide"
+            } else {
+                passwordField.type = 'password';
+                icon.textContent = '👁️'; // Change icon to "show"
+            }
+        }
+    </script>
 </body>
 
 </html>
