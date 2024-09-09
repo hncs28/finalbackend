@@ -20,6 +20,11 @@
     }
 
     .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
         color: var(--font-color);
         font-weight: 900;
         font-size: 20px;
@@ -144,7 +149,8 @@
     <form class="form" method="POST" action="/CMS/activities/store">
         @csrf
         <div class="title">
-            Form Add New in Activities<br><span>Fill out the details</span>
+            <p>Form add new activity</p>
+            <p>Fill out the detail</p>
         </div>
         <p>Activity name</p>
         <input type="text" name="actName" placeholder="Enter activity name" class="input">
