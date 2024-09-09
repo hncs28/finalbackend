@@ -28,9 +28,11 @@ class AuthController extends Controller
 
         \Log::info('Auth attempt result', ['result' => $check]);
 
+        $project = DB::table('projects')->select('*')->get();
+
         if ($check) {
             \Log::info('Login successful');
-            return redirect()->route('projects.index'); // Chuyển hướng đến route 'projects.index'
+            return view('CMS/projects/projects', compact('project'));
         } else {
             \Log::error('Login failed');
             return back()->withErrors([
