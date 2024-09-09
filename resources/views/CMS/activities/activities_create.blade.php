@@ -147,11 +147,8 @@
         @csrf
         <div class="title">
             <p>Form add new activity</p>
-            <p>Fill out the detail</p>
         </div>
-        <p>Activity name</p>
         <input type="text" name="actName" placeholder="Enter activity name" class="input">
-        <p>Activity image</p>
         <input type="text" name="actImg" class="input" placeholder="Enter activity image url">
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/activities/">Go to Homepage</a>

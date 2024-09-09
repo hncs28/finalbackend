@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,127 +15,135 @@
             height: 100vh;
             margin: 0;
         }
-        
-        .login-container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 360px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
 
-        .login-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(0, 0, 0, 0.1) 10%, transparent 50%);
-            transform: translateX(-50%);
-            z-index: 0;
-        }
-
-        .login-container h2 {
-            margin-top: 0;
-            color: #333;
-            font-size: 28px;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .login-container form {
+        .container {
             display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 350px;
+            width: 300px;
             flex-direction: column;
+            gap: 35px;
+            border-radius: 15px;
+            background: #e3e3e3;
+            box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
+            padding: 40px;
+        }
+
+        .login-title {
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            font-weight: bold;
+            font-size: x-large;
+            margin-top: 1.5em;
+        }
+
+        .inputBox {
             position: relative;
-            z-index: 1;
+            width: 250px;
         }
 
-        .login-container label {
-            margin-bottom: 8px;
-            color: #555;
-            font-weight: 600;
-            text-align: left;
-        }
-
-        .login-container input[type="email"],
-        .login-container input[type="password"] {
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            font-size: 16px;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-
-        .login-container input[type="email"]:focus,
-        .login-container input[type="password"]:focus {
-            border-color: #6e8efb;
+        .inputBox input {
+            width: 100%;
+            padding: 10px;
             outline: none;
-            box-shadow: 0 0 0 0.2rem rgba(110, 143, 251, 0.25);
-        }
-
-        .login-container button {
-            background-color: #6e8efb;
-            color: #ffffff;
             border: none;
-            padding: 12px;
+            color: #000;
+            font-size: 1em;
+            background: transparent;
+            border-left: 2px solid #000;
+            border-bottom: 2px solid #000;
+            transition: 0.1s;
+            border-bottom-left-radius: 8px;
+        }
+
+        .inputBox span {
+            position: absolute;
+            left: 0;
+            transform: translateY(-4px);
+            margin-left: 10px;
+            padding: 10px;
+            pointer-events: none;
+            font-size: 12px;
+            color: #000;
+            text-transform: uppercase;
+            transition: 0.5s;
+            letter-spacing: 3px;
             border-radius: 8px;
-            font-size: 16px;
+        }
+
+        .inputBox input:valid~span,
+        .inputBox input:focus~span {
+            transform: translateX(113px) translateY(-15px);
+            font-size: 0.8em;
+            padding: 5px 10px;
+            background: #000;
+            letter-spacing: 0.2em;
+            color: #fff;
+            border: 2px;
+        }
+
+        .inputBox input:valid,
+        .inputBox input:focus {
+            border: 2px solid #000;
+            border-radius: 8px;
+        }
+
+        .login-button {
+            height: 45px;
+            width: 100px;
+            border-radius: 5px;
+            border: 2px solid #000;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            position: relative;
-            z-index: 1;
+            background-color: transparent;
+            transition: 0.5s;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 2px;
         }
 
-        .login-container button:hover {
-            background-color: #5a6bfc;
-            transform: translateY(-2px);
+        .login-button:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
         }
 
-        .login-container button:active {
-            background-color: #4a5cda;
-            transform: translateY(0);
-        }
-
-        .login-container .forgot-password {
+        .forgot-password {
             margin-top: 12px;
             font-size: 14px;
             color: #6e8efb;
             text-decoration: none;
-            display: block;
             transition: color 0.3s;
         }
 
-        .login-container .forgot-password:hover {
+        .forgot-password:hover {
             color: #5a6bfc;
             text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
-    <div class="login-container">
-        <h2>Admin Login</h2>
+    <div class="container">
+        <h2 class="login-title">Admin Login</h2>
 
         <form action="{{ route('login') }}" method="POST">
             @csrf
-            <div>
-                <label for="email">Email:</label>
+            <div class="inputBox">
                 <input type="email" id="email" name="email" required>
+                <span>Email</span>
             </div>
 
-            <div>
-                <label for="password">Password:</label>
+            <div class="inputBox">
                 <input type="password" id="password" name="password" required>
+                <span>Password</span>
             </div>
 
-            <button type="submit">Login</button>
+            <button type="submit" class="login-button">Enter</button>
         </form>
+        <a href="#" class="forgot-password">Forgot Password?</a>
     </div>
 </body>
+
 </html>

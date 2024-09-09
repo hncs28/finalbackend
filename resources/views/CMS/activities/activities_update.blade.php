@@ -141,11 +141,8 @@
         @csrf
         <div class="title">
             <p>Update Activity Information</p>
-            <p>Edit the details</p>
         </div>
-        <p>Activity name</p>
         <input type="text" name="actName" value="{{ $act->actName }}" class="input">
-        <p>Activity image</p>
         <input type="text" name="actImg" value="{{ $act->actImg }}" class="input">
         <button type="submit" class="button-submit">Submit</button>
         <a class="button-back" href="/CMS/activities/">Go to Homepage</a>
