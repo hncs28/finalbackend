@@ -252,7 +252,7 @@
             </table>
 
             <!-- Add New Traditional Room Button -->
-            <a href="/CMS/traditional_room/create" class="btn-add">Add New Traditional Room</a>
+            <a href="/CMS/traditional_room/create" class="btn-add">Add New Human</a>
         </div>
     </body>
 @else
