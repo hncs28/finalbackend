@@ -17,6 +17,8 @@
         border: 2px solid var(--main-color);
         box-shadow: 4px 4px var(--main-color);
         width: 80%;
+        max-width: 600px;
+        /* Ensure form doesn't exceed 600px */
     }
 
     .title {
@@ -60,72 +62,7 @@
         border: 2px solid var(--input-focus);
     }
 
-    .login-with {
-        display: flex;
-        gap: 20px;
-    }
-
-    .button-log {
-        cursor: pointer;
-        width: 40px;
-        height: 40px;
-        border-radius: 100%;
-        border: 2px solid var(--main-color);
-        background-color: var(--bg-color);
-        box-shadow: 4px 4px var(--main-color);
-        color: var(--font-color);
-        font-size: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .icon {
-        width: 24px;
-        height: 24px;
-        fill: var(--main-color);
-    }
-
-    .button-log:active,
-    .button-confirm:active {
-        box-shadow: 0px 0px var(--main-color);
-        transform: translate(3px, 3px);
-    }
-
-    .button-confirm {
-        margin: 50px auto 0 auto;
-        width: 120px;
-        height: 40px;
-        border-radius: 5px;
-        border: 2px solid var(--main-color);
-        background-color: var(--bg-color);
-        box-shadow: 4px 4px var(--main-color);
-        font-size: 17px;
-        font-weight: 600;
-        color: var(--font-color);
-        cursor: pointer;
-    }
-
-    /* Additional styles for submit and navigation buttons */
-    .button-submit {
-        width: 100%;
-        height: 40px;
-        border-radius: 5px;
-        border: 2px solid var(--main-color);
-        background-color: var(--bg-color);
-        box-shadow: 4px 4px var(--main-color);
-        font-size: 17px;
-        font-weight: 600;
-        color: var(--font-color);
-        cursor: pointer;
-        margin-top: 20px;
-    }
-
-    .button-submit:hover {
-        background-color: var(--input-focus);
-        color: white;
-    }
-
+    .button-submit,
     .button-back {
         width: 100%;
         height: 40px;
@@ -143,6 +80,7 @@
         align-items: center;
     }
 
+    .button-submit:hover,
     .button-back:hover {
         background-color: var(--input-focus);
         color: white;
@@ -153,8 +91,57 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        padding: 10px;
+        /* Padding added for smaller screens */
+    }
+
+    /* Media queries for responsive design */
+    @media (max-width: 768px) {
+        .form {
+            width: 100%;
+            /* Take full width on smaller screens */
+            max-width: 100%;
+            /* Ensure no max width for smaller devices */
+            padding: 15px;
+        }
+
+        .input {
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 18px;
+        }
+
+        .button-submit,
+        .button-back {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .form {
+            padding: 10px;
+            /* Smaller padding for mobile */
+        }
+
+        .title {
+            font-size: 16px;
+        }
+
+        .input {
+            font-size: 14px;
+            padding: 8px;
+        }
+
+        .button-submit,
+        .button-back {
+            font-size: 14px;
+            height: 35px;
+        }
     }
 </style>
+
 <div class="container">
     <form class="form" method="POST" action="/CMS/activities/store">
         @csrf
